@@ -1,29 +1,29 @@
 //
-//  AddStudentViewController.swift
+//  addStudentViewController.swift
 //  chooseStudent
 //
-//  Created by ICMMAC05-7528 on 27/09/22.
+//  Created by CLAUDIA MALHEIROS on 10/4/22.
 //
 
 import UIKit
 
-class AddStudentViewController: UIViewController {
-
-    var manager = managerStudent()
+class addStudentViewController: UIViewController {
     
     @IBOutlet weak var tfNome: UITextField!
     @IBOutlet weak var tfSerie: UITextField!
     @IBOutlet weak var tfNota: UITextField!
     
+    var manager = managerStudents()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
-    
-    @IBAction func btAddNewStudent(_ sender: Any) {
-        manager.addNewSrudent(msnome: tfNome.text!, msserie: tfSerie.text!, msnota: tfNota.text!)
+
+    @IBAction func addNewStudent(_ sender: Any) {
+        manager.addNewStudent(nome: tfNome.text!, serie: tfSerie.text!, nota: tfNota.text!)
         tfNome.text = ""
         tfSerie.text = ""
         tfNota.text = ""
     }
-    
 }

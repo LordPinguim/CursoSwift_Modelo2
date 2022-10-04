@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  chooseStudent
 //
-//  Created by ICMMAC07-13C3 on 27/09/22.
+//  Created by CLAUDIA MALHEIROS on 9/28/22.
 //
 
 import UIKit
