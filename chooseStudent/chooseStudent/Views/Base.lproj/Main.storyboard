@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xbW-Sx-OZb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xbW-Sx-OZb">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -105,14 +106,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqd-Lq-6fx">
-                                <rect key="frame" x="146" y="283" width="83" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.39614915849999999" green="0.09758480638" blue="0.96886211629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nenhum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0Q-w8-ZCm">
                                 <rect key="frame" x="67" y="324" width="253" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -145,7 +138,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="btNext:" destination="2zf-Md-0uS" eventType="touchUpInside" id="Ibe-aR-EQU"/>
+                                    <action selector="btShowIndexNext:" destination="2zf-Md-0uS" eventType="touchUpInside" id="Eyf-5l-Jeb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niI-0E-EXk">
@@ -158,17 +151,25 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="btBack:" destination="2zf-Md-0uS" eventType="touchUpInside" id="4UP-Ql-czp"/>
+                                    <action selector="btShowIndexBack:" destination="2zf-Md-0uS" eventType="touchUpInside" id="t0P-6J-Q4a"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqd-Lq-6fx">
+                                <rect key="frame" x="146" y="283" width="83" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.39614915849999999" green="0.09758480638" blue="0.96886211629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Lc-Yg-IYF"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="7G6-3N-tGv"/>
                     <connections>
-                        <outlet property="btback" destination="niI-0E-EXk" id="3H4-Ij-coa"/>
-                        <outlet property="btnext" destination="Cmb-Jm-uqr" id="sza-JG-RaA"/>
+                        <outlet property="btIndexBack" destination="niI-0E-EXk" id="kNp-9I-kd6"/>
+                        <outlet property="btIndexNext" destination="Cmb-Jm-uqr" id="DxG-gT-WvT"/>
                         <outlet property="listnome" destination="7jb-he-gOw" id="vhs-dc-Vdd"/>
                         <outlet property="listnota" destination="dlw-7s-LwC" id="5cJ-fP-Gfq"/>
                         <outlet property="listserie" destination="V0Q-w8-ZCm" id="Drk-0c-eZE"/>
@@ -276,8 +277,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrowshape.turn.up.left.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="arrowshape.turn.up.right.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="arrowshape.turn.up.left.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="arrowshape.turn.up.right.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
