@@ -8,7 +8,7 @@
 import Foundation
 
 class managerStudents {
-   private var escola: [Student] = []
+   var escola: [Student] = []
     
     func addNewStudent(nome: String, serie: String, nota: String){
         escola.append(Student(nomeS: nome, serieS: serie, notaS: nota))

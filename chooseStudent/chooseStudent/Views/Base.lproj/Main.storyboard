@@ -151,7 +151,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="btShowIndexBack:" destination="2zf-Md-0uS" eventType="touchUpInside" id="t0P-6J-Q4a"/>
+                                    <action selector="btShowIndexBack:" destination="2zf-Md-0uS" eventType="touchUpInside" id="39H-Fc-ISr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqd-Lq-6fx">
@@ -168,7 +168,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7G6-3N-tGv"/>
                     <connections>
-                        <outlet property="btIndexBack" destination="niI-0E-EXk" id="kNp-9I-kd6"/>
+                        <outlet property="btIndexBack" destination="niI-0E-EXk" id="oSM-rO-DxX"/>
                         <outlet property="btIndexNext" destination="Cmb-Jm-uqr" id="DxG-gT-WvT"/>
                         <outlet property="listnome" destination="7jb-he-gOw" id="vhs-dc-Vdd"/>
                         <outlet property="listnota" destination="dlw-7s-LwC" id="5cJ-fP-Gfq"/>

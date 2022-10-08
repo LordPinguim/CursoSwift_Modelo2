@@ -64,8 +64,8 @@
 		7907DCB328E891DA00955376 /* Banco */ = {
 			isa = PBXGroup;
 			children = (
-				7907DCC828E8920400955376 /* View */,
 				7907DCC928E8920B00955376 /* Model */,
+				7907DCC828E8920400955376 /* View */,
 				7907DCCA28E8921400955376 /* Controler */,
 				7907DCB428E891DA00955376 /* AppDelegate.swift */,
 				7907DCB628E891DA00955376 /* SceneDelegate.swift */,

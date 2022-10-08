@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Clientes{
+    var nomeCliente: String
+    var debitoCliente: String
+    var creditoCliente: String
+}

@@ -41,14 +41,14 @@ class mainViewController: UIViewController {
     
     @IBAction func showViewAddStudent(_ sender: Any) {
         let ADD_STUDENT:addStudentViewController = MAIN.instantiateViewController(withIdentifier: "addStudent") as! addStudentViewController
-        ADD_STUDENT.manager = self.manager
+        ADD_STUDENT.manager = manager
         self.present(ADD_STUDENT, animated: true, completion: nil)
         performSegue(withIdentifier: "segueAddStudent", sender: nil)
     }
     
     @IBAction func showViewListStudents(_ sender: Any) {
         let LIST_STUDENT:listStudentViewController = MAIN.instantiateViewController(withIdentifier: "listStudents") as! listStudentViewController
-        LIST_STUDENT.manager = self.manager
+        LIST_STUDENT.manager = manager
         self.present(LIST_STUDENT, animated: true, completion: nil)
         performSegue(withIdentifier: "segueListStudents", sender: nil)
     }

@@ -9,10 +9,14 @@ import UIKit
 
 class ListClientViewController: UIViewController {
 
+    @IBOutlet weak var ListTfNome: UILabel!
+    @IBOutlet weak var ListTfDebito: UILabel!
+    @IBOutlet weak var ListTfCredito: UILabel!
+    
+    @IBOutlet weak var BtNext: UIButton!
+    @IBOutlet weak var BtBack: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
 }
