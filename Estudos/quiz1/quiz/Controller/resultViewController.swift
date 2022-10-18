@@ -1,21 +1,24 @@
 //
-//  ResultViewController.swift
-//  MiniQuiz
+//  resultViewController.swift
+//  quiz
 //
-//  Created by ICMMAC08-5617 on 11/10/22.
+//  Created by ICMMAC07-13C3 on 11/10/22.
 //
 
 import UIKit
 
-class ResultViewController: UIViewController {
-
+class resultViewController: UIViewController {
+    
     var numberCorrect = 0
     var numberWrong = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         print(numberCorrect, numberWrong)
     }
+    
+
 
 }

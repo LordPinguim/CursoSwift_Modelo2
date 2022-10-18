@@ -24,7 +24,7 @@ class managerQuiz{
         Quiz(pergunta: "Desafio 2: Quanto dinheiro? Um homem gastou tudo o que tinha no bolso em três lojas. Em cada uma gastou 1 real a mais do que a metade do que tinha ao entrar. Quanto o homem tinha ao entrar na primeia loja?", opçoes: ["R$19,00", "R$14,00", "R$12,00", "R$20,00"], respostacorreta: 1),
         Quiz(pergunta: "Desafio 3: Determine o menor número natural cuja: divisão por 2 tem resto 1; divisão por 3 tem resto 2; divisão por 4 tem resto 3; divisão por 5 tem resto 4; divisão por 6 tem resto 5; divisão por 7 tem resto 0.", opçoes: ["100", "30", "120", "119"], respostacorreta: 3),
         Quiz(pergunta: "Desafio 4: Deseja-se descobrir quantos degraus são visíveis numa escada rolante. Para isso foi feito o seguinte: duas pessoas começaram a subir a escada juntas, uma subindo um degrau de cada vez enquanto que a outra subia dois. Ao chegar ao topo, o primeiro contou 21 degraus enquanto o outro 28. Com esses dados foi possível responder a questão. Quantos degraus são visíveis nessa escada rolante? (obs: a escada está andando).", opçoes: ["32", "42", "62", "52"], respostacorreta: 1),
-        Quiz(pergunta: "Desafio 5: eu tenho o dobro da idade que tu tinha quando eu tinha a tua idade. Quando tu tiveres a minha idade, a soma das nossas idadess será de 45 anos. Quais são as nossas idades atuais?", opçoes: ["20 anos e 15 anos", "9 anos e 18 anos", "20 anos e 25 anos", "30 anos e 15 anos"], respostacorreta: 0)
+        Quiz(pergunta: "Desafio 5: eu tenho o dobro da idade que tu tinha quando eu tinha a tua idade. Quando tu tiveres a minha idade, a soma das nossas idadess será de 45 anos. Quais são as nossas idades atuais?", opçoes: ["20 anos e 15 anos", "9 anos e 18 anos", "20 anos e 25 anos", "30 anos e 15 anos"], respostacorreta: 0),
         Quiz(pergunta: "Desafio 6: Você tem uma balança de 2 pratos e 12 tomates, sendo que: 11 tem o mesmo peso e 1 tem peso diferente. Com apenas três pesagens, descubra qual é o tomate diferente e se ele é mais leve ou mais pesado.", opçoes: ["9,10,11,12", "5,6,7,8", "1,2,3,4", "1,9,10,11"], respostacorreta: 0),
         Quiz(pergunta: "Desafio 7: Um viajante precisava pagar sua estadia de uma semana (7 dias) em um hotel, sendo que só possuía uma barra de ouro para pagar. O dono do hotel fez um desafio ao viajante para que ele aceitasse o pagamento em ouro. A proposta foi a seguinte: Aceito o pagamento em ouro. Porém, você terá que pagar uma diária de cada vez, e só poderá cortar a barra duas vezes. Como o viajante deverá cortar a barra para fazer o pagamento?", opçoes: ["1/2", "1/7", "2/7", "7/1"], respostacorreta: 1),
         Quiz(pergunta: "Desafio 8: Você tem dois dados normais com seis lados cada um, numerados de 1 a 6. Ao lançá-los, o total foi 5. Você será o vencedor se fizer outro 5 antes de fazer um 7, caso contrário você perde. Se for qualquer outra combinação antes de um 5 ou um 7, você lançará os dados novamente. Quais são suas chances de vencer?", opçoes: ["2 em 20", "5 em 9", "9 em 5", "2 em 45"], respostacorreta: 3),
@@ -117,26 +117,25 @@ class managerQuiz{
         Quiz(pergunta: "Desafio 87:", opçoes: ["", "", "", ""], respostacorreta: 0),
         Quiz(pergunta: "Desafio 88:", opçoes: ["", "", "", ""], respostacorreta: 0),
         Quiz(pergunta: "Desafio 89:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 90:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        //--
-        Quiz(pergunta: "Desafio 91:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 92:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 93:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 94:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 95:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 96:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 97:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 98:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 99:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        //FIM
-        Quiz(pergunta: "O=DESAFIO==100:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        
+        //O FIM
+        Quiz(pergunta: "O DESAFIO:", opçoes: ["", "", "", ""], respostacorreta: 0)
     ]
     
     var managerQCont = -1
+    var numberCorret = 0
+    var numberWrong = 0
+    
     func managerQReloadQuiz() -> Quiz{
         managerQCont = managerQCont + 1
         return managerQMinhasperguntas[managerQCont]
-        
+    }
+    func quizAnswer(index: Int)->Bool{
+        if managerQMinhasperguntas[managerQCont].respostacorreta == index{
+            numberCorret = numberCorret+1
+            return true
+        }else{
+            numberWrong = numberWrong+1
+            return false
+        }
     }
 }

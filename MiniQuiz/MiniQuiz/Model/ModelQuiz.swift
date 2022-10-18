@@ -14,4 +14,5 @@ struct Quiz{
     // [] -> isso é uma coleção, ou seja posso adicionar um grupo de var em vez de fazer varias
     var respostacorreta: Int
     // Int para deixar aleatorio, por isso um Inteiro
+    
 }
