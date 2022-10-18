@@ -11,7 +11,7 @@ class managerClientes {
 var bancoAnaClif: [Clientes] = []
 
 func addNovoCliente(nome: String, debito: String, credito: String){
-    bancoAnaClif.append(Clientes(nomeCliente: nome, debitoCliente: debito, creditoCliente: debito))
+    bancoAnaClif.append(Clientes(nomeCliente: nome, debitoCliente: debito, creditoCliente: credito))
     print(bancoAnaClif)
 }
 func ListaClientesBanco(index: Int) -> Clientes{
