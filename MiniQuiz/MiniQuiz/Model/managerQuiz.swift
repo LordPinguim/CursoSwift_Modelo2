@@ -15,8 +15,9 @@ class managerQuiz{
          -> Estatistica para cada materia
          -> Mudar Background de cada materia
          -> --
-     ----->1 de math, 10 port, 20 hist, 30 geo, 40 bio, 50 quim, 60 fisic, 70 art, 80 Ed.F, 90 filo
+     ----->0-10 de math(Azul), 10-20 hist(Amarelo), 20-30 geo(Laranja), 30-40 bio(Verde), 40-50 quim(Verde escuro), 50-60 fisic(Vermelho-bordo), 60-70 art(Roxo)
          */
+        
         //Primeira pergunta para descontrair
         Quiz(pergunta: "Desafio 0: Quanto é 1 + 1?", opçoes: ["11", "2", "100", "101"], respostacorreta: 1),
         //Math
@@ -95,29 +96,6 @@ class managerQuiz{
         Quiz(pergunta: "Desafio 67:", opçoes: ["", "", "", ""], respostacorreta: 0),
         Quiz(pergunta: "Desafio 68:", opçoes: ["", "", "", ""], respostacorreta: 0),
         Quiz(pergunta: "Desafio 69:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        //Ed.f
-        Quiz(pergunta: "Desafio 70:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 71:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 72:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 73:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 74:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 75:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 76:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 77:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 78:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 79:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        //=> July - Rafael <=
-        //Filo
-        Quiz(pergunta: "Desafio 80:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 81:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 82:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 83:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 84:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 85:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 86:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 87:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 88:", opçoes: ["", "", "", ""], respostacorreta: 0),
-        Quiz(pergunta: "Desafio 89:", opçoes: ["", "", "", ""], respostacorreta: 0),
         //O FIM
         Quiz(pergunta: "O DESAFIO:", opçoes: ["", "", "", ""], respostacorreta: 0)
     ]
