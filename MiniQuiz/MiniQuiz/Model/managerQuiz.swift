@@ -18,7 +18,7 @@ class managerQuiz{
      ----->1 de math, 10 port, 20 hist, 30 geo, 40 bio, 50 quim, 60 fisic, 70 art, 80 Ed.F, 90 filo
          */
         //Primeira pergunta para descontrair
-        Quiz(pergunta: "Desafio 0: O que é, o que é? Entra na água e não se molha.", opçoes: ["Gelo", "Sombra", "Vento", "Bolha"], respostacorreta: 1),
+        Quiz(pergunta: "Desafio 0: Quanto é 1 + 1?", opçoes: ["11", "2", "100", "101"], respostacorreta: 1),
         //Math
         Quiz(pergunta: "Desafio 1: Um automóvel comporta dois passageiros no banco da frente e três no banco de trás. Calcule o número de alternativas distintas para lotar o automóvel utilizando 7 pessoas, de modo que uma dessas pessoas nunca ocupe um lugar nos bancos da frente.", opçoes: ["100", "720", "1800", "1000"], respostacorreta: 2),
         Quiz(pergunta: "Desafio 2: Quanto dinheiro? Um homem gastou tudo o que tinha no bolso em três lojas. Em cada uma gastou 1 real a mais do que a metade do que tinha ao entrar. Quanto o homem tinha ao entrar na primeia loja?", opçoes: ["R$19,00", "R$14,00", "R$12,00", "R$20,00"], respostacorreta: 1),
@@ -106,6 +106,7 @@ class managerQuiz{
         Quiz(pergunta: "Desafio 77:", opçoes: ["", "", "", ""], respostacorreta: 0),
         Quiz(pergunta: "Desafio 78:", opçoes: ["", "", "", ""], respostacorreta: 0),
         Quiz(pergunta: "Desafio 79:", opçoes: ["", "", "", ""], respostacorreta: 0),
+        //=> July - Rafael <=
         //Filo
         Quiz(pergunta: "Desafio 80:", opçoes: ["", "", "", ""], respostacorreta: 0),
         Quiz(pergunta: "Desafio 81:", opçoes: ["", "", "", ""], respostacorreta: 0),

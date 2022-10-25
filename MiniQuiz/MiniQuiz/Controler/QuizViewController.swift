@@ -10,30 +10,41 @@ import UIKit
 class QuizViewController: UIViewController {
 
     @IBOutlet weak var question: UILabel!
-    @IBOutlet var option: [UIButton]!
+    @IBOutlet var opcoes: [UIButton]!
     
     var manager = managerQuiz()
-    var quiz: Quiz!
+    var quizGame: Quiz!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         upgrandeQuiz()
     }
 
-    @IBAction func btOption(_ sender: UIButton) {
-        let index = option.firstIndex(of: sender) ?? 0
+    @IBAction func btOpcoes(_ sender: UIButton) {
+        let index = Int(opcoes.firstIndex(of: sender) ?? 0)
+        if manager.quizAnswer(index: index){
+            upgrandeQuiz()
+        }else{
+            upgrandeQuiz()
+        }
         
     }
     func upgrandeQuiz(){
         if manager.managerQCont+1 < manager.managerQMinhasperguntas.count{
-            quiz = manager.managerQReloadQuiz()
-            question.text = quiz.pergunta
+            quizGame = manager.managerQReloadQuiz()
+            question.text = quizGame.pergunta
             for i in 0...3{
-                option[i].setTitle(quiz.option[i], for: .normal)
+                opcoes[i].setTitle(quizGame.opçoes[i], for: .normal)
             }
         }else{
             performSegue(withIdentifier: "segueResult", sender: nil)
         }
-    }
+        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let RESULT = segue.destination as! ResultViewController
+        RESULT.numberCorrect = manager.numberCorret
+        RESULT.numberWrong = manager.numberWrong
+        RESULT.scoreCorrect = manager.numberCorret
+        RESULT.numberWrong = manager.numberWrong
     }
 }
