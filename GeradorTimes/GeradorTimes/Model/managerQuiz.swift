@@ -7,4 +7,7 @@ class managerGT {
         GeradorTime.append(GenTime(nomeGT: nome))
         print(GeradorTime)
     }
+    func ListaCLientes(index: Int) -> GenTime{
+        return GeradorTime[index]
+    }
 }
