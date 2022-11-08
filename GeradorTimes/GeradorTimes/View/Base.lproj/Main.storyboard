@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -97,7 +97,7 @@
                                 <color key="tintColor" red="0.96789175270000005" green="0.55721652509999997" blue="0.12997522950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvT-Sg-vZx">
-                                <rect key="frame" x="16" y="104" width="125" height="28"/>
+                                <rect key="frame" x="-3" y="104" width="144" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96789175270000005" green="0.55721652509999997" blue="0.12997522950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,15 +124,6 @@
                                     <action selector="btAddClient:" destination="6XC-q8-DJJ" eventType="touchUpInside" id="xdN-ap-jVw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lista Dos Participantes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1X6-2F-BUD">
-                                <rect key="frame" x="16" y="357" width="343" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.85034757849999998" green="0.87811154130000002" blue="0.1297369599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="0.85034757849999998" green="0.87811154130000002" blue="0.1297369599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KX-fX-tII">
                                 <rect key="frame" x="329" y="20" width="46" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -143,6 +134,19 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="w2K-aA-2iK" kind="unwind" unwindAction="returnMainViewWithSegue:" id="ZOq-A7-RQJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTG-wH-nnh">
+                                <rect key="frame" x="74" y="346" width="224" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.85034757849999998" green="0.87811154130000002" blue="0.1297369599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Lista">
+                                    <fontDescription key="titleFontDescription" name="Impact" family="Impact" pointSize="40"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btShowLista:" destination="6XC-q8-DJJ" eventType="touchUpInside" id="bSl-gU-EjL"/>
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OIy-4Z-nBm">
@@ -165,7 +169,7 @@
                                             <backgroundConfiguration key="background" image="arrowshape.turn.up.left.fill" catalog="system"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="btBackShow:" destination="6XC-q8-DJJ" eventType="touchUpInside" id="tpb-tc-yIf"/>
+                                            <action selector="btBackShow:" destination="6XC-q8-DJJ" eventType="touchUpInside" id="RVM-np-CS3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhQ-ri-A8e">
@@ -177,7 +181,7 @@
                                             <backgroundConfiguration key="background" image="arrowshape.turn.up.forward.fill" catalog="system"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="btNextShow:" destination="6XC-q8-DJJ" eventType="touchUpInside" id="9fL-2E-nn0"/>
+                                            <action selector="btNextShow:" destination="6XC-q8-DJJ" eventType="touchUpInside" id="sPP-kG-y3i"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BJ-7v-p17">
@@ -190,6 +194,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <imageReference key="image" image="trash.fill" catalog="system" symbolScale="large" renderingMode="template"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btRemoverClient:" destination="6XC-q8-DJJ" eventType="touchUpInside" id="OoF-tG-ftL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2965372242557206" green="0.0" blue="0.759765625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -201,9 +208,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="697-oZ-kiB"/>
                     <connections>
-                        <outlet property="ListNome" destination="AWs-dv-HUW" id="Vyr-cD-RtY"/>
-                        <outlet property="btback" destination="zA6-Bx-dZh" id="rMG-sn-HcL"/>
-                        <outlet property="btnext" destination="VhQ-ri-A8e" id="CrG-8h-VUs"/>
+                        <outlet property="ListNome" destination="AWs-dv-HUW" id="ysj-ik-72f"/>
+                        <outlet property="SecondView" destination="OIy-4Z-nBm" id="Kf7-uf-O3A"/>
+                        <outlet property="btback" destination="zA6-Bx-dZh" id="wbJ-Yg-HLM"/>
+                        <outlet property="btnext" destination="VhQ-ri-A8e" id="QeR-YS-fbW"/>
                         <outlet property="tfNome" destination="SUM-vS-2a7" id="hNU-N1-Nen"/>
                     </connections>
                 </viewController>

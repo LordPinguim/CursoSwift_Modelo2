@@ -9,7 +9,7 @@ import UIKit
 
 class GeradorViewController: UIViewController {
 
-    var ManagerGT = managerGT()
+    var manager = managerGT()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,9 +15,14 @@ class ListViewController: UIViewController {
     @IBOutlet weak var btnext: UIButton!
     @IBOutlet weak var btback: UIButton!
     
-    var ManagerGT = managerGT()
+    @IBOutlet weak var SecondView: UIView!
+    
+    //var manager: GenTime!
+    var Time: GenTime!
+    //var ManagerGT = managerGT()
+    var manager = managerGT()
     var IndexClient = 0
-    var manager: GenTime!
+    //touch.begain
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,40 +30,71 @@ class ListViewController: UIViewController {
         btnext.isHidden = true
         btback.isHidden = true
         
-        if ManagerGT.GeradorTime.count > 0 {
-            ListNome.text = ManagerGT.GeradorTime[0].nomeGT
+        if manager.quantidadeClient() > 0 {
+            reloadClient()
+        }
+        if manager.GeradorTime.count > 0 {
+            ListNome.text = manager.GeradorTime[0].nomeGT
             btnext.isHidden = false
         }
     }
-    
     @IBAction func btAddClient(_ sender: Any) {
-        ManagerGT.addNewClient(nome: tfNome.text!)
+        manager.addNewClient(nome: tfNome.text!)
         view.endEditing(true)
-        
-        ListNome.text = tfNome.text
         tfNome.text = ""
+        ListNome.text = manager.GeradorTime[IndexClient].nomeGT
+        reloadClient()
+        if IndexClient < 0 {
+            btnext.isHidden = true
+            
+        }else if IndexClient == 0 {
+            btback.isHidden = true
+            
+            }
+    }
+    //Coisas da SecondView
+    @IBAction func btShowLista(_ sender: Any) {
+        SecondView.isHidden = false
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        SecondView.isHidden = true
     }
     
+    //Botões
     @IBAction func btNextShow(_ sender: Any) {
         IndexClient = IndexClient+1
-        manager = ManagerGT.ListaCLientes(index: IndexClient)
-        ListNome.text = manager.nomeGT
+        Time = manager.ListaCLientes(index: IndexClient)
+        ListNome.text = Time.nomeGT
+        btnext.isHidden = false
+        
+        if (IndexClient+1) == manager.GeradorTime.count{
+            btnext.isHidden = true
+        }
+    }
+    @IBAction func btBackShow(_ sender: Any) {
+        IndexClient = IndexClient-1
+        Time = manager.ListaCLientes(index: IndexClient)
+        ListNome.text = Time.nomeGT
         btback.isHidden = false
         
-        if (IndexClient+1) == ManagerGT.GeradorTime.count{
+        if IndexClient < 1 {
             btnext.isHidden = true
         }
     }
     
-    @IBAction func btBackShow(_ sender: Any) {
-        IndexClient = IndexClient-1
-        manager = ManagerGT.ListaCLientes(index: IndexClient)
-        ListNome.text = manager.nomeGT
-        btnext.isHidden = false
+    @IBAction func btRemoverClient(_ sender: Any) {
+        manager.removerClient(inde: IndexClient)
+        print(index)
+        print(manager.quantidadeClient())
         
-        if IndexClient < 1 {
-            btback.isHidden = true
+        if IndexClient < manager.quantidadeClient(){
+            reloadClient()
         }
+    }
+    
+    func reloadClient(){
+        Time = manager.ListaCLientes(index: IndexClient)
+        ListNome.text = "\(Time.nomeGT)"
     }
     
 }

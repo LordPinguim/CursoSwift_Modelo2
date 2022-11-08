@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    var ManagerGT = managerGT()
+    var manager = managerGT()
         let MAIN = UIStoryboard(name: "Main", bundle: nil)
     
     override func viewDidLoad() {
@@ -18,14 +18,14 @@ class MainViewController: UIViewController {
 
     @IBAction func showViewList(_ sender: Any) {
             let LIST: ListViewController = MAIN.instantiateViewController(withIdentifier: "List") as! ListViewController
-        LIST.ManagerGT = ManagerGT
+        LIST.manager = manager
             self.present(LIST, animated: true, completion: nil)
             performSegue(withIdentifier: "segueList", sender: nil)
         }
         
         @IBAction func showViewGerador(_ sender: Any) {
             let GERADOR: GeradorViewController = MAIN.instantiateViewController(withIdentifier: "Gerador") as! GeradorViewController
-            GERADOR.ManagerGT = ManagerGT
+            GERADOR.manager = manager
             self.present(GERADOR, animated: true, completion: nil)
             performSegue(withIdentifier: "segueGerador", sender: nil)
         }
