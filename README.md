@@ -32,6 +32,7 @@ Temos a primeira View que é mais um Menu do que um Home, após essa tela vem a 
 ![Aplicativos (3)](https://user-images.githubusercontent.com/97364522/204642788-16cd2b30-2d6d-4537-be5d-66664d6b6fce.png)
 Um Aplicativo em que armazenamos variaveis e com ela formamos times, podemos impor regras a esses times.
 Eu não cheguei a terminar.
+- [Clique aqui](https://github.com/LordPinguim/CursoSwift_SegundaEtapa/tree/main/GeradorTimes)
 
 :construction: Terminando :construction:
 
